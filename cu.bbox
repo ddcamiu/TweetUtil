@@ -1,6 +1,4 @@
-set -o allexport
 left=-88.3541
 right=-88.1419
 bottom=40.0242
 top=40.1862
-set +o allexport
