@@ -11,10 +11,10 @@ else
 		# specific bbox file provided
 		bboxfile=$bbox
 	else
-	        if [[ -f "~/bin/bbox/${bbox}.bbox" ]]
+	        if [[ -f "${HOME}/bin/bbox/${bbox}.bbox" ]]
 		then 
 			# pre-defined bbox files can be called with names
-			bboxfile=~/bin/bbox
+			bboxfile=${HOME}/bin/bbox/${bbox}.bbox
 		else
 			echo "No such bbox file!"
 			exit 1
