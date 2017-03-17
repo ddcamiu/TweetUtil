@@ -22,3 +22,7 @@ Assuming order of ```<lat,lon>``` by default. Pass environment ```new=1``` to sw
 ```filter sampleData/test.twt >geo-tagged.twt```
 
 ```new=1 filter chicago sampleData/test.twt```
+
+## Misc
+
+After installation a ```bbox``` function will be added to the .bashrc as a shortcut to display pre-defined bounding boxes. E.g. ```bbox chicago``` will print the content of chicago.bbox.
