@@ -11,11 +11,10 @@ ${HOME}/bin/filter :
 
 ${HOME}/bin/bbox.sh :
 	@cp ${PWD}/bbox.sh ${HOME}/bin/bbox.sh
+	@printf '[[ -f ${HOME}/bin/bbox.sh ]] && source ${HOME}/bin/bbox.sh #TWEET_UTIL_MARK' >>~/.bashrc
 
-all: ${HOME}/bin/bbox ${HOME}/bin/filterByBbox.awk ${HOME}/bin/filter ${HOME}/bin/bbox.sh
+install : ${HOME}/bin/bbox ${HOME}/bin/filterByBbox.awk ${HOME}/bin/filter ${HOME}/bin/bbox.sh
 
-install : all
-	@printf '[[ -f ${HOME}/bin/bbox.sh ]] && source ${HOME}/bin/bbox.sh' >>~/.bashrc
-
-clean : all
+clean : install
 	@rm ${HOME}/bin/{bbox,filterByBbox.awk,filter,bbox.sh}
+	@sed -i '/TWEET_UTIL_MARK/d' ~/.bashrc
