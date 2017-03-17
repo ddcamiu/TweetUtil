@@ -9,7 +9,9 @@ Assuming order of ```<lat,lon>``` by default. Pass environment ```new=1``` to sw
 
 ## Installation
 
-```./install.sh```
+```make install```
+
+Use ```make clean``` to uninstall
 
 ## Usage
 
@@ -26,3 +28,5 @@ Assuming order of ```<lat,lon>``` by default. Pass environment ```new=1``` to sw
 ## Misc
 
 After installation a ```bbox``` function will be added to the .bashrc as a shortcut to display pre-defined bounding boxes. E.g. ```bbox chicago``` will print the content of chicago.bbox.
+
+re-logging in or ```source ~/.bashrc``` to enable the function after installation
