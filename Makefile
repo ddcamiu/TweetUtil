@@ -14,4 +14,4 @@ install: bbox, filterByBbox.awk, filter.sh
 
 clean:
 	rm ${HOME}/bin/{bbox,filterByBbox.awk,filter}
-	echo 'unset bbox' >>${HOME}.bashrc
+	echo 'unset bbox' >>${HOME}/.bashrc
