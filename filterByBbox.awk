@@ -12,7 +12,7 @@ if (ENVIRON["ALL_GEO"] == 1) {
 
 split($3,xy,",");
 
-if (ENVIRON["old"] == "1") {
+if (ENVIRON["new"] != "1") {
     # lat,lon for 2013-2015
     y = xy[1];
     x = xy[2];
