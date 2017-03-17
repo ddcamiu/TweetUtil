@@ -3,11 +3,30 @@ BEGIN{
 FS="\x01";
 }
 
-($3!="") && ($3!="null"){
+$3 ~ /,/{
+#$3!="" && $3!="null"{
+if (ENVIRON["ALL_GEO"] == 1) {
+    print;
+    next;
+}
+
 split($3,xy,",");
 
-#print xy[1], ENVIRON["left"], ENVIRON["right"];
-#print xy[2], ENVIRON["bottom"], ENVIRON["top"];
+if (ENVIRON["old"] == "1") {
+    # lat,lon for 2013-2015
+    y = xy[1];
+    x = xy[2];
+}
+else { #Default lon,lat for 2016+
+    x = xy[1];
+    y = xy[2];
+}
+#x=xy[ENVIRON["lat"]];
+#y=xy[ENVIRON["lon"]];
 
-if ((ENVIRON["ALL_GEO"] == 1) || (xy[1] >= ENVIRON["left"] && xy[1] <= ENVIRON["right"] && xy[2] >= ENVIRON["bottom"] && xy[2] <= ENVIRON["top"])) {print;}
+#print x,y
+#print ENVIRON["left"], ENVIRON["right"];
+#print ENVIRON["bottom"], ENVIRON["top"];
+
+if ((x >= ENVIRON["left"] && x <= ENVIRON["right"] && y >= ENVIRON["bottom"] && y <= ENVIRON["top"])) {print;}
 }
