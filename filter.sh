@@ -1,8 +1,9 @@
 #!/bin/bash
 if [[ $# == 1 ]]
 then
-	# no bbox file specified, just filter for geo-tagged tweets
-	export ALL_GEO=1 
+	# no bbox file specified, use the bbox in environ.
+	# if no bbox in environ or "nobbox=1", then filter all geo-tagged tweets
+	# export ALL_GEO=1 
         twtfile=$1
 else
 	bbox=$1

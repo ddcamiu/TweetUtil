@@ -1,11 +1,14 @@
-#!/usr/bin/env awk -f
+#!/bin/awk -f
 BEGIN{
 FS="\x01";
+if (ENVIRON["nobbox"] == 1 || ENVIRON["left"]=="" || ENVIRON["right"] == "" || ENVIRON["top"] == "" || ENVIRON["bottom"] == "") {
+    no_bbox=1;
+}
 }
 
 $3 ~ /,/{
 #$3!="" && $3!="null"{
-if (ENVIRON["ALL_GEO"] == 1) {
+if (no_bbox=1) {
     print;
     next;
 }
