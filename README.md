@@ -13,6 +13,8 @@ Assuming order of ```<lat,lon>``` by default. Pass environment ```new=1``` to sw
 
 Use ```make clean``` to uninstall
 
+Installing to ${HOME}/bin by default. Make sure to include ${HOME}/bin in $PATH.
+
 ## Usage
 
 Basic usage: ```filter [pre-defined_bbox_names|specified_bbox_file] Tweets-csv-from-streaming-API```
