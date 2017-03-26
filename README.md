@@ -1,7 +1,7 @@
 # TweetUtil
 Utilities for tweets processing.
 
-The filter tool provides convenient function to filter tweets based on geographical bounding box. Boxes could ba pre-defined following the simple rules in ```bbox``` folder and can be used with names. 
+The ```filter``` tool provides convenient function to filter tweets based on geographical bounding box. Boxes could ba pre-defined following the simple rules in ```bbox``` folder and can be used with names. 
 
 Results are output to stdout, need redirection to save to files.
 
