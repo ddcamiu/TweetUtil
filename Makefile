@@ -1,5 +1,7 @@
-${HOME}/bin/bbox :
-	@mkdir -p ${HOME}/bin/bbox
+${HOME}/bin:
+	@mkdir ${HOME}/bin
+
+${HOME}/bin/bbox : ${HOME}/bin
 	@ln -s ${PWD}/bbox ${HOME}/bin/bbox
 
 ${HOME}/bin/filterByBbox.awk :
